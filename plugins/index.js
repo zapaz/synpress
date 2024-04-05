@@ -71,7 +71,7 @@ module.exports = (on, config) => {
       if (process.env.NETWORK_NAME && !network) {
         network = process.env.NETWORK_NAME;
       } else if (!network) {
-        network = 'goerli';
+        network = 'sepolia';
       }
       return await metamask.changeNetwork(network);
     },

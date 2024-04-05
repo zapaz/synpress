@@ -15,9 +15,9 @@
 <p align="center" >
   <img src="https://i.imgur.com/Bg8Rch6.png" height="200" />
   <p align="center">
-    <a href="https://github.com/Synthetixio/synpress">Synpress</a> 
+    <a href="https://github.com/Synthetixio/synpress">Synpress</a>
     is E2E testing framework <br/> based on <a href="https://www.cypress.io/">Cypress</a>
-    and <a href="https://playwright.dev/">Playwright</a> 
+    and <a href="https://playwright.dev/">Playwright</a>
     with support for <a href="https://metamask.io/">MetaMask</a>.
   </p>
 </p>
@@ -81,6 +81,7 @@ Curious and want to learn more? 🤓
 
 - [](#)
 - [](#-1)
+- [♨️ New release](#️-new-release)
 - [Table of content](#table-of-content)
   - [🧑‍🤝‍🧑 Community](#-community)
   - [🖥️ Install](#️-install)
@@ -96,6 +97,8 @@ Curious and want to learn more? 🤓
     - [How to run e2e tests for Synpress using Docker](#how-to-run-e2e-tests-for-synpress-using-docker)
   - [💁‍♂️ CI tips \& tricks](#️-ci-tips--tricks)
   - [🧪 Usage \& commands](#-usage--commands)
+  - [👨‍⚕️ Known problems with MetaMask](#️-known-problems-with-metamask)
+      - [⭐ Sentry.io HTTP error 499 (Request has been forbidden by antivirus)](#-sentryio-http-error-499-request-has-been-forbidden-by-antivirus)
   - [📃 Environmental variables](#-environmental-variables)
   - [🚢 Release process](#-release-process)
   - [📝 More resources](#-more-resources)
@@ -289,7 +292,7 @@ which runs metamask setup before all tests:
 
 - passes welcome page
 - imports wallet
-- changes network (defaults to `goerli`) or creates custom network and changes
+- changes network (defaults to `sepolia`) or creates custom network and changes
   to it (depending on your setup)
 - switches back to Cypress window and starts testing
 
@@ -297,7 +300,7 @@ It requires environmental variable called `SECRET_WORDS` to be present in
 following format => `'word1 word2 word3 ..'` (delimited with spaces) or private
 key in an environmental variable called `PRIVATE_KEY`.
 
-To change default network (`goerli`), you can use `NETWORK_NAME` environmental
+To change default network (`sepolia`), you can use `NETWORK_NAME` environmental
 variable, for example: `NETWORK_NAME=sepolia`.
 
 Available choices are: `mainnet`, `goerli`, `sepolia` and `localhost`.
